@@ -22,6 +22,7 @@ import DownloadMenuItems from '.';
 const createProps = () => ({
   pdfMenuItemTitle: 'Export to PDF',
   imageMenuItemTitle: 'Download as Image',
+  pdfA4MenuItemTitle: 'Download A4',
   dashboardTitle: 'Test Dashboard',
   logEvent: jest.fn(),
   dashboardId: '123',

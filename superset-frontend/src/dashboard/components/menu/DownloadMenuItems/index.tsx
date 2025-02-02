@@ -22,10 +22,12 @@ import DownloadScreenshot from './DownloadScreenshot';
 import { DownloadScreenshotFormat } from './types';
 import DownloadAsPdf from './DownloadAsPdf';
 import DownloadAsImage from './DownloadAsImage';
+import DownloadAsPdfA4 from './DownloadAsPdfA4';
 
 export interface DownloadMenuItemProps {
   pdfMenuItemTitle: string;
   imageMenuItemTitle: string;
+  pdfA4MenuItemTitle: string;
   dashboardTitle: string;
   logEvent?: Function;
   dashboardId: string;
@@ -35,6 +37,7 @@ const DownloadMenuItems = (props: DownloadMenuItemProps) => {
   const {
     pdfMenuItemTitle,
     imageMenuItemTitle,
+    pdfA4MenuItemTitle,
     logEvent,
     dashboardId,
     dashboardTitle,
@@ -73,6 +76,12 @@ const DownloadMenuItems = (props: DownloadMenuItemProps) => {
           />
           <DownloadAsImage
             text={imageMenuItemTitle}
+            dashboardTitle={dashboardTitle}
+            logEvent={logEvent}
+            {...rest}
+          />
+          <DownloadAsPdfA4
+            text={pdfA4MenuItemTitle}
             dashboardTitle={dashboardTitle}
             logEvent={logEvent}
             {...rest}

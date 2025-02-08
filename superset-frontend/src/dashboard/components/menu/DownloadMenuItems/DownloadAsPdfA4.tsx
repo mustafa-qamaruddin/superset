@@ -19,7 +19,7 @@
 import { SyntheticEvent } from 'react';
 import { logging, t } from '@superset-ui/core';
 import { Menu } from 'src/components/Menu';
-import downloadAsPdf from 'src/utils/downloadAsPdf';
+import downloadAsPdfA4 from 'src/utils/downloadAsPdfA4';
 import { LOG_ACTIONS_DASHBOARD_DOWNLOAD_AS_PDF } from 'src/logger/LogUtils';
 import { useToasts } from 'src/components/MessageToasts/withToasts';
 
@@ -37,7 +37,7 @@ export default function DownloadAsPdfA4({
   const { addDangerToast } = useToasts();
   const onDownloadPdf = async (e: SyntheticEvent) => {
     try {
-      downloadAsPdf(SCREENSHOT_NODE_SELECTOR, dashboardTitle, true)(e);
+      downloadAsPdfA4(SCREENSHOT_NODE_SELECTOR, dashboardTitle, true)(e);
     } catch (error) {
       logging.error(error);
       addDangerToast(t('Sorry, something went wrong. Try again later.'));

@@ -151,6 +151,7 @@
     "json-bigint": "^1.0.0",
     "json-stringify-pretty-compact": "^2.0.0",
     "jspdf": "^2.5.2",
+    "jspdf-autotable": "^3.8.4",
     "lodash": "^4.17.21",
     "luxon": "^3.5.0",
     "mapbox-gl": "^2.10.0",
